@@ -8,6 +8,8 @@ int cols, rows;
 float cellWidth, cellHeight;
 int charX, charY;
 int shieldX, shieldY;
+float run;
+
 
 void setup() {
   size(800, 800);
@@ -53,8 +55,23 @@ void moveEnemy() {
 }
 
 void spawnEnemy() {
-  int x = int(random(cols));
-  board[x][0] = 2;
+  run = random(1, 4);
+  
+  if (run == 1){
+    int x = int(cols/2);
+    board[x][0] = 2;}
+    
+  if (run == 2) {
+    int x = int(cols/2);
+    board[x][0] = 2;}
+  
+  if (run == 3) {
+    int x = int(cols/2);
+    board[x][0] = 2;}
+  
+  if (run == 4) {
+    int x = int(cols/2);
+    board[x][0] = 2;}
 }
 
 void characterMoveLeft() {
